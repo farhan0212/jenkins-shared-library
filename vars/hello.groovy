@@ -10,5 +10,5 @@ def npm_do() {
 def docker_build(imageName, buildNumber){
     echo("image name = ${imageName}")
     echo("build number = ${buildNumber}")
-    sh("docker build -t ${imageName}:${buildNumber}")
+    sh("docker build -t ${imageName}:${buildNumber} .")
 }
