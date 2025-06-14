@@ -6,3 +6,7 @@ def npm_do() {
    sh('npm ci')
    sh('npm run build')
 }
+
+def docker_build(imageName, buildNumber){
+    sh('docker build -t ${imageName}:${buildNumber}')
+}
