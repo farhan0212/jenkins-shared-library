@@ -1,10 +1,10 @@
-def call(credentialsId, imageName, buildNumber){
+def call(dockerCredentialsId, imageName, buildNumber){
         echo("image name = ${imageName}")
         echo("build number = ${buildNumber}")
         sh("docker build -t ${imageName}:${buildNumber} .")
 
         withCredentials([usernamePassword(
-            credentialsId: credentialsId,
+            credentialsId: dockerCredentialsId,
             usernmameVariable: 'DOCKER_USER',
             passwordVariable: 'DOCKER_PASS'
         )]){
