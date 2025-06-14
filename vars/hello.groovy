@@ -3,7 +3,6 @@ def world() {
 } 
 
 def npm_do(List commands) {
-    for (command in commands) {
-        sh("npm ${command}")
-    }
+   sh('npm ci')
+   sh('npm run build')
 }
