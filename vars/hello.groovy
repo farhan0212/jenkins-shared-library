@@ -4,6 +4,6 @@ def world() {
 
 def npm_do(List commands) {
     for (command in commands) {
-        sh("npm run ${command}")
+        sh("npm ${command}")
     }
 }
