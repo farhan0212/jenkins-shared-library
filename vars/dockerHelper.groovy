@@ -10,3 +10,7 @@ def call(dockerCredentialsId, imageName, buildNumber){
             sh("docker push ${imageName}:${buildNumber}")
         }
 }
+
+def hello(){
+    sh("hello world")
+}
