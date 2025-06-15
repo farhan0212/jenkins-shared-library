@@ -1,4 +1,4 @@
-def call(dockerCredentialsId, imageName, buildNumber){
+def docker_build_push(dockerCredentialsId, imageName, buildNumber){
         sh("docker build -t ${imageName}:${buildNumber} .")
 
         withCredentials([usernamePassword(
