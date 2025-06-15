@@ -12,5 +12,5 @@ def call(dockerCredentialsId, imageName, buildNumber){
 }
 
 def hello(){
-    sh("hello world")
+    sh(" echo hello world")
 }
